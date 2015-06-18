@@ -2,7 +2,9 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  'ember-cli-bootswatch': 'paper'
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -19,8 +21,11 @@ var app = new EmberApp();
 
 // BOOTSTRAP
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+// app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css.map');
+// app.import('bower_components/bootswatch/paper/js/bootswatch.js');
+app.import('bower_components/bootswatch/paper/bootstrap.css');
+// app.import('bower_components/bootswatch/paper/css/bootswatch.css.map');
 
 // MOMENT DATE FORMAT
 app.import('bower_components/moment/min/moment.min.js');
