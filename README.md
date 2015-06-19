@@ -1,4 +1,4 @@
-## Q & A board
+# Q & A board
 
 <a href="#" target="#"><Add link></a>
 
@@ -20,11 +20,11 @@ A simple message board for posting answers and gathering replies.
 
 Ian MacDonald
 
-# Q-a-board-cli
+## Q-a-board-cli
 
 The remainder of this README outlines the details of collaborating on this Ember application.
 
-## Prerequisites
+### Prerequisites
 
 You will need the following things properly installed on your computer.
 
@@ -34,14 +34,14 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
+### Installation
 
 * `git clone https://github.com/matchbookmac/q-a-board-cli` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
 
-## Running / Development
+### Running / Development
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
