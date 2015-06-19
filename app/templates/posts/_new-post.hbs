@@ -1,0 +1,15 @@
+<p class="lead">Add a post:</p>
+<form>
+  <div class="form-group">
+    {{input value=author type="text" class="form-control" placeholder="Name"}}
+  </div>
+  <br>
+  <div class="form-group">
+    {{input value=question class="form-control" placeholder="Your Question"}}
+  </div>
+  <br>
+  <div class="form-group">
+    {{textarea value=body class="form-control" placeholder="Post"}}
+  </div>
+  <button class="btn btn-primary" {{action "submitPost"}}>Post</button>
+</form>

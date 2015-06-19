@@ -23,7 +23,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self' https://fonts.gstatic.com",
-      'connect-src': "'self' https://intense-fire-2998.firebaseio.com/",
+      'connect-src': "'self' https://intense-fire-2998.firebaseio.com/ wss://s-dal5-nss-20.firebaseio.com/.ws?v=5&ns=intense-fire-2998",
       'img-src': "'self' https://intense-fire-2998.firebaseio.com/",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'frame-src': "'none'"

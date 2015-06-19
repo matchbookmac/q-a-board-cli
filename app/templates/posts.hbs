@@ -1,13 +1,16 @@
-<div class="col-md-4">
-  <p class="lead">Add a post:</p>
-  <form>
-    <div class="form-group">
-      {{input value=author type="text" class="form-control" placeholder="Name"}}
+<div class="col-md-3">
+  {{#each post in model}}
+    <div class="question lead">
+      <div>
+        {{post-date post.date}}
+      </div>
+      <div>
+        <strong>{{post.author}}</strong> asked: {{post.question}}
+      </div>
     </div>
-    <br>
-    <div class="form-group">
-      {{textarea value=body type="text" class="form-control" placeholder="Post"}}
-    </div>
-    <button class="btn btn-primary">Post</button>
-  </form>
+  {{/each}}
+</div>
+
+<div class="col-md-6">
+  {{partial 'posts/new-post'}}
 </div>

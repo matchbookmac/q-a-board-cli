@@ -4,13 +4,16 @@ export default Ember.Controller.extend({
   actions: {
     submitPost: function () {
       var post = this.store.createRecord('post', {
-        author: this.get('author'),
-        body:   this.get('body')
+          author: this.get('author'),
+        question: this.get('question'),
+            body: this.get('body'),
+            date: new Date()
       });
       post.save();
       this.setProperties({
-        author: '',
-        body:   ''
+          author: '',
+        question: '',
+            body: ''
       });
       this.transitionToRoute('posts');
     }
