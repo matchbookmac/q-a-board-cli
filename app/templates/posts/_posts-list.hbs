@@ -1,9 +1,9 @@
 {{#each post in model}}
-  <div class="question lead" {{action 'viewPost' post}}>
+  <div class="question" {{action 'viewPost' post}}>
     <div>
       {{post-date post.date}}
     </div>
-    <div>
+    <div class="lead">
       <strong>{{post.author}}</strong> asked: {{post.question}}
     </div>
   </div>

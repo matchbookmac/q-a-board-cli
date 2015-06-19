@@ -1,3 +1,19 @@
 .muted {
   opacity: 0.5;
 }
+
+.question {
+  border: 1px solid rgba(0, 0, 0, 0.5);;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.question .lead {
+  margin: 0px;
+}
