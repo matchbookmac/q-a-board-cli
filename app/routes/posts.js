@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     return this.store.find('post');
   },
   showForm: function () {
-    this.get('controller').set('viewPost', true);
+    this.get('controller').set('viewingPost', true);
   }.on('deactivate')
 });

@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   actions: {
     viewPost: function (post) {
       this.set('viewingPost', true);
-      this.transitionToRoute('post', post)
+      this.transitionToRoute('post', post);
     },
     hidePost: function () {
       this.set('viewingPost', false);
