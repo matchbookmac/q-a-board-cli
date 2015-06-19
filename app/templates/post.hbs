@@ -34,13 +34,7 @@
     {{/if}}
   </p>
   <br>
-    {{#if viewAnswers}}
-
-      {{#each answer in model.answers}}
-        <blockquote>
-          <p>{{answer.answer}}</p>
-          <footer><strong>{{answer.author}}</strong> <cite>{{post-date answer.date}}</cite></footer>
-        </blockquote>
-      {{/each}}
-    {{/if}}
+  {{#if viewAnswers}}
+    {{partial 'post/view-answers'}}
+  {{/if}}
 </div>

@@ -1,0 +1,11 @@
+{{#each answer in model.answers}}
+  <blockquote>
+    <p>
+      {{answer.answer}}
+      {{#if editPost}}
+        <button class="btn btn-danger btn-xs pull-right"{{action 'deleteAnswer' answer}}>&#x2716;</button>
+      {{/if}}
+    </p>
+    <footer><strong>{{answer.author}}</strong> <cite>{{post-date answer.date}}</cite></footer>
+  </blockquote>
+{{/each}}

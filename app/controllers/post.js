@@ -72,6 +72,9 @@ export default Ember.Controller.extend({
       this.set('answerPost', true);
       this.set('deletePost', false);
       this.transitionToRoute('posts');
+    },
+    deleteAnswer: function (answer) {
+      answer.destroyRecord();
     }
   }
 });
