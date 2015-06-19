@@ -4,6 +4,9 @@
       <button class="btn btn-info" {{action 'viewPost'}}>View</button>
     </div>
     <div class="btn-group" role="group">
+      <button class="btn btn-primary" {{action 'answerPost'}}>Answer</button>
+    </div>
+    <div class="btn-group" role="group">
       <button class="btn btn-warning" {{action 'editPost'}}>Edit</button>
     </div>
     <div class="btn-group" role="group">
@@ -13,20 +16,31 @@
 </div>
 
 <div>
+  <p>
+    {{#if viewPost}}
+      {{partial 'post/view-post'}}
+    {{/if}}
 
-  {{#if viewPost}}
-    {{partial 'post/view-post'}}
-  {{/if}}
+    {{#if editPost}}
+      {{partial 'post/edit-post'}}
+    {{/if}}
 
-  {{#if editPost}}
-    {{partial 'post/edit-post'}}
-  {{/if}}
+    {{#if deletePost}}
+      {{partial 'post/delete-post'}}
+    {{/if}}
 
-  {{#if deletePost}}
-    {{partial 'post/delete-post'}}
-  {{/if}}
+    {{#if answerPost}}
+      {{partial 'post/new-answer'}}
+    {{/if}}
+  </p>
+  <br>
+    {{#if viewAnswers}}
 
-
-
-
+      {{#each answer in model.answers}}
+        <blockquote>
+          <p>{{answer.answer}}</p>
+          <footer><strong>{{answer.author}}</strong> <cite>{{post-date answer.date}}</cite></footer>
+        </blockquote>
+      {{/each}}
+    {{/if}}
 </div>

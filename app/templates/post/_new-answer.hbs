@@ -1,0 +1,11 @@
+<p class="lead">Answer this Question:</p>
+<form>
+  <div class="form-group">
+    {{input value=author type="text" class="form-control" placeholder="Your Name"}}
+  </div>
+  <br>
+  <div class="form-group">
+    {{textarea value=answer class="form-control" placeholder="Your Answer"}}
+  </div>
+  <button class="btn btn-primary btn-block" {{action "submitAnswer" model}}>Post Your Answer</button>
+</form>
