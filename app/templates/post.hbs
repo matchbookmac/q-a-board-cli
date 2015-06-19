@@ -1,1 +1,12 @@
-{{outlet}}
+  <div class="question">
+    <div class="lead">
+      <strong>{{model.author}}</strong> asked: {{model.question}}
+      <br>
+      <span class="lead muted">
+        {{post-date model.date}}
+      </span>
+    </div>
+    <p>
+      {{model.body}}
+    </p>
+  </div>

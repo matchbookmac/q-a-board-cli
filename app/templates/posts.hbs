@@ -1,16 +1,18 @@
 <div class="col-md-3">
-  {{#each post in model}}
-    <div class="question lead">
-      <div>
-        {{post-date post.date}}
-      </div>
-      <div>
-        <strong>{{post.author}}</strong> asked: {{post.question}}
-      </div>
-    </div>
-  {{/each}}
+  {{#if viewingPost}}
+  <div class="lead">
+    <button class="btn btn-primary btn-block" {{action "hidePost"}}>Add a Post</button>
+  </div>
+  {{/if}}
+  {{partial 'posts/posts-list'}}
 </div>
 
-<div class="col-md-6">
-  {{partial 'posts/new-post'}}
-</div>
+{{#if viewingPost}}
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
+{{else}}
+  <div class="col-md-6">
+    {{partial 'posts/new-post'}}
+  </div>
+{{/if}}

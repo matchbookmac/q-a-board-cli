@@ -1,0 +1,10 @@
+{{#each post in model}}
+  <div class="question lead" {{action 'viewPost' post}}>
+    <div>
+      {{post-date post.date}}
+    </div>
+    <div>
+      <strong>{{post.author}}</strong> asked: {{post.question}}
+    </div>
+  </div>
+{{/each}}
