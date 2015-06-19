@@ -1,6 +1,6 @@
 # Q & A board
 
-<a href="#" target="#"><Add link></a>
+<a href="http://cartoonist-cheetah-46106.bitballoon.com/" target="#">Q & A</a>
 
 By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
 
