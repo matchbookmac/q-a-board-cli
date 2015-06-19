@@ -17,3 +17,7 @@
 .question .lead {
   margin: 0px;
 }
+
+.alert {
+  background-color: rgba(229, 28, 35, 0.5);
+}

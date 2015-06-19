@@ -5,13 +5,20 @@ export default Ember.Controller.extend({
   editPost:   false,
   deletePost: false,
   actions: {
+    viewPost: function () {
+      this.set('viewPost', true);
+      this.set('editPost', false);
+      this.set('deletePost', false);
+    },
     editPost: function () {
       this.set('editPost', true);
       this.set('viewPost', false);
+      this.set('deletePost', false);
     },
     askDelete: function () {
       this.set('deletePost', true);
       this.set('viewPost', false);
+      this.set('editPost', false);
     },
     submitPost: function (post) {
       post.setProperties({
@@ -22,6 +29,7 @@ export default Ember.Controller.extend({
       post.save();
       this.set('viewPost', true);
       this.set('editPost', false);
+      this.set('deletePost', false);
     },
     deletePost: function (post) {
       post.destroyRecord();

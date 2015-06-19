@@ -1,42 +1,29 @@
-<p>
-  <div class="btn-group" role="group" aria-label="...">
-    <button class="btn btn-warning" {{action 'editPost'}}>Edit</button>
-    <button class="btn btn-danger" {{action 'askDelete'}}>Delete</button>
+<div class="lead">
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+      <button class="btn btn-info" {{action 'viewPost'}}>View</button>
+    </div>
+    <div class="btn-group" role="group">
+      <button class="btn btn-warning" {{action 'editPost'}}>Edit</button>
+    </div>
+    <div class="btn-group" role="group">
+      <button class="btn btn-danger" {{action 'askDelete'}}>Delete</button>
+    </div>
   </div>
-</p>
+</div>
 
 <div>
 
   {{#if viewPost}}
-    <div class="lead">
-      <strong>{{model.author}}</strong> asked: {{model.question}}
-      <br>
-      <span class="lead muted">{{post-date model.date}}</span>
-    </div>
-    <p>{{model.body}}</p>
+    {{partial 'post/view-post'}}
   {{/if}}
 
   {{#if editPost}}
-    <p class="lead">Edit Your Post:</p>
-    <form>
-      <div class="form-group">
-        {{input value=model.author type="text" class="form-control" placeholder="Name"}}
-      </div>
-      <br>
-      <div class="form-group">
-        {{input value=model.question class="form-control" placeholder="Your Question"}}
-      </div>
-      <br>
-      <div class="form-group">
-        {{textarea value=model.body class="form-control" placeholder="Post"}}
-      </div>
-      <button class="btn btn-success" {{action "submitPost" model}}>Save</button>
-    </form>
+    {{partial 'post/edit-post'}}
   {{/if}}
 
   {{#if deletePost}}
-    <div class="alert alert-danger" role="alert">Are you sure you want to delete this post?</div>
-    <button class="btn btn-danger" {{action 'deletePost' model}}>Delete</button>
+    {{partial 'post/delete-post'}}
   {{/if}}
 
 

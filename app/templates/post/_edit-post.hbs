@@ -1,0 +1,15 @@
+<p class="lead">Edit Your Post:</p>
+<form>
+  <div class="form-group">
+    {{input value=model.author type="text" class="form-control" placeholder="Name"}}
+  </div>
+  <br>
+  <div class="form-group">
+    {{input value=model.question class="form-control" placeholder="Your Question"}}
+  </div>
+  <br>
+  <div class="form-group">
+    {{textarea value=model.body class="form-control" placeholder="Post"}}
+  </div>
+  <button class="btn btn-success btn-block" {{action "submitPost" model}}>Save</button>
+</form>
