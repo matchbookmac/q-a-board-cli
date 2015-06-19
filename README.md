@@ -1,7 +1,28 @@
+## Q & A board
+
+<a href="#" target="#"><Add link></a>
+
+By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
+
+@ Epicodus Programming School, Portland, OR
+
+GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald
+
+### Description
+
+**Q & A board**
+
+This is an app written using `Ember-cli`.
+
+A simple message board for posting answers and gathering replies.
+
+### Author(s)
+
+Ian MacDonald
+
 # Q-a-board-cli
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The remainder of this README outlines the details of collaborating on this Ember application.
 
 ## Prerequisites
 
@@ -15,7 +36,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/matchbookmac/q-a-board-cli` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -50,4 +71,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
