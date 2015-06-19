@@ -4,7 +4,31 @@
     <button class="btn btn-primary btn-block" {{action "hidePost"}}>Add a Post</button>
   </div>
   {{/if}}
-  {{partial 'posts/posts-list'}}
+  <div class="lead">
+    <div class="btn-group btn-group-sm btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group btn-group-sm" role="group">
+        <button class="btn btn-default" {{action 'orderAdded'}}>Original</button>
+      </div>
+      <div class="btn-group btn-group-sm" role="group">
+        <button class="btn btn-default" {{action 'oldestFirst'}}>Oldest</button>
+      </div>
+      <div class="btn-group btn-group-sm" role="group">
+        <button class="btn btn-default" {{action 'newestFirst'}}>Newest</button>
+      </div>
+    </div>
+  </div>
+  {{#if orderAdded}}
+    {{partial 'posts/posts-list'}}
+  {{/if}}
+
+  {{#if oldestFirst}}
+    {{partial 'posts/oldest-posts'}}
+  {{/if}}
+
+  {{#if newestFirst}}
+    {{partial 'posts/newest-posts'}}
+  {{/if}}
+
 </div>
 
 {{#if viewingPost}}

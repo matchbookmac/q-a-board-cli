@@ -1,0 +1,10 @@
+{{#each post in oldest}}
+  <div class="question" {{action 'viewPost' post}}>
+    <div>
+      {{post-date post.date}}
+    </div>
+    <div class="lead">
+      <strong>{{post.author}}</strong> asked: {{post.question}}
+    </div>
+  </div>
+{{/each}}
