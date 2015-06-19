@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'q-a-board-cli',
     environment: environment,
-    // contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    // firebase: 'https://intense-fire-2998.firebaseio.com/',
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://intense-fire-2998.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
