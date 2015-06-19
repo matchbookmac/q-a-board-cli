@@ -5,6 +5,11 @@ export default Ember.Route.extend({
     return this.store.find('post', params.post_id);
   },
   showPost: function () {
-    this.get('controller').set('viewPost', true);
+    var controller = this.get('controller')
+    controller.set('viewPost', true);
+    controller.set('viewAnswers', true);
+    controller.set('answerPost', false);
+    controller.set('editPost', false);
+    controller.set('deletePost', false);
   }.on('deactivate')
 });

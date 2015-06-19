@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs:       ['post'],
   viewingPost: false,
   actions: {
     viewPost: function (post) {
@@ -23,7 +24,8 @@ export default Ember.Controller.extend({
         question: '',
         body: ''
       });
-      this.transitionToRoute('posts');
+      this.set('viewingPost', true);
+      this.transitionToRoute('post', post.id);
     }
   }
 });

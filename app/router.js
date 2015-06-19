@@ -6,10 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('home', { path: '/' });
-  this.resource('posts', { path: 'posts' }, function () {
+  this.resource('posts', { path: '/' }, function () {
     this.route('new-post');
-    this.resource('post', { path: ':post_id' });
+    this.resource('post', { path: 'posts/:post_id' });
   });
 });
 
