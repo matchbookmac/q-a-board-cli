@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return this.store.find('post', params.post_id);
   },
   showPost: function () {
-    var controller = this.get('controller')
+    var controller = this.get('controller');
     controller.set('viewPost', true);
     controller.set('viewAnswers', true);
     controller.set('answerPost', false);
